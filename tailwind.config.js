@@ -8,7 +8,7 @@ module.exports = {
         black: '#222222',
         grey: '#F2F2F2',
         'grey-2': '#828282',
-        error: 'F90000',
+        error: '#F90000',
         success: '#27AE60',
       },
     },

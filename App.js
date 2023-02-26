@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { Text } from './src/features/components/typography';
 import { Button, IconButton } from './src/features/components/button';
 import { RowBox } from './src/features/components/box';
+import { Input } from './src/features/components/input';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ ...Kanit, ...Rowdies });
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <View className="flex-1 justify-center items-center bg-grey">
+      <Input />
         <Button variant="primary" />
         <Button variant="secondary" />
         <Button variant="tertiary" />

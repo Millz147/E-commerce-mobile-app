@@ -2,9 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Text } from '../typography';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import tw from '../../../../tailwind.config.js';
-const { extend } = tw.theme;
-const { colors } = extend;
+import { colors } from '../../../infrastructures/theme';
 
 export const Button = ({ label = 'Button', variant = 'primary', onPress }) => {
   const variants = {

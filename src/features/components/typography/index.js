@@ -4,6 +4,7 @@ import { Text as NativeText, View } from 'react-native';
 export const Text = ({ children, variant = 'caption' }) => {
   const variants = {
     hint: 'text-[10px] text-black font-[Kanit-Light]',
+    error: 'text-[10px] text-error font-[Kanit-Light]',
     caption: 'text-[12px] text-black font-[Kanit-Medium]',
     title: 'text-[14px] text-black font-[Kanit-Bold]',
     heading: 'text-[18px] text-black font-[Rowdies-Bold]',
