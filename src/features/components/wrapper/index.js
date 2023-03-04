@@ -16,7 +16,7 @@ export const MainWrapper = ({ children }) => {
   isAndroid ? (Wrapper = View) : (Wrapper = SafeAreaView);
   return (
     <Wrapper className="flex-1 bg-white">
-      <View className="flex-1 m-[10px] justify-center">
+      <View className="flex-1 m-[10px]">
         <StatusBar barStyle={barStyle} />
         <KeyboardAvoidingView>{children}</KeyboardAvoidingView>
       </View>

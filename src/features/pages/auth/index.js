@@ -24,17 +24,17 @@ export const _SignIn = ({}) => {
 
   return (
     <MainWrapper>
-      <ViewBox classname="">
+      <ViewBox classname="h-[100%] w-[100%] pt-[10%]">
         <Text variant="headline" classname="pb-[40px]">
           Login
         </Text>
         {Inputs.map((item) => (
           <Input key={item.name} placeholder={item.placeholder} />
         ))}
+        <ArrowNext label="Forgot Your Password?" screen="ForgotPassword" />
+        <Button label="LOGIN" />
+        <Social label="Or Login with Social Account" />
       </ViewBox>
-      <ArrowNext label="Forgot Your Password?" />
-      <Button label="LOGIN" />
-      <Social label="Or Login with Social Account" />
     </MainWrapper>
   );
 };
@@ -60,17 +60,46 @@ export const _SignUp = ({}) => {
 
   return (
     <MainWrapper>
-      <ViewBox classname="">
+      <ViewBox classname="h-[100%] w-[100%] pt-[10%]">
         <Text variant="headline" classname="pb-[40px]">
           Sign Up
         </Text>
         {Inputs.map((item) => (
           <Input key={item.name} placeholder={item.placeholder} />
         ))}
+        <ArrowNext label="Already Have an Account?" screen="SignIn" />
+        <Button label="SIGN UP" />
+        <Social label="Or Sign Up with Social Account" />
       </ViewBox>
-      <ArrowNext label="Already Have an Account?" screen="SignIn" />
-      <Button label="SIGN UP" />
-      <Social label="Or Sign Up with Social Account" />
+    </MainWrapper>
+  );
+};
+
+export const _ForgotPassword = ({}) => {
+  const Inputs = [
+    {
+      name: 'email',
+      placeholder: 'Email',
+      onChangeText: (e) => null,
+    },
+  ];
+
+  return (
+    <MainWrapper>
+      <ViewBox classname="h-[100%] w-[100%] pt-[10%]">
+        <Text variant="headline" classname="pb-[40px]">
+          Forgot Password
+        </Text>
+        <Text>
+          Please, enter your email address. You will receive a link to create a
+          new password via email.
+        </Text>
+        {Inputs.map((item) => (
+          <Input key={item.name} placeholder={item.placeholder} />
+        ))}
+        <ArrowNext label="Go Back" screen="SignIn" />
+        <Button label="SEND" classname="h-[10%]" />
+      </ViewBox>
     </MainWrapper>
   );
 };

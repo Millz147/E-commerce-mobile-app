@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SignIn, SignUp } from '../../features/screens/auth';
+import { SignIn, SignUp,ForgotPassword } from '../../features/screens/auth';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +15,7 @@ export const AccountNavigator = () => {
     >
       <Stack.Screen component={SignIn} name="SignIn" />
       <Stack.Screen component={SignUp} name="SignUp" />
+      <Stack.Screen component={ForgotPassword} name="ForgotPassword" />
     </Stack.Navigator>
   );
 };
