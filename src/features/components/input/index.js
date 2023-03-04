@@ -15,7 +15,7 @@ export const Input = ({
 }) => {
   const [focus, setFocus] = useState(false);
   const classes = clx(
-    'w-[90%] bg-grey-2/20 items-center',
+    'w-[90%] bg-grey-2/20 justify-between',
     type === 'error' && 'border border-error',
     type === 'proceed' ? 'pl-[10px]' : 'p-[20px] '
   );
@@ -43,13 +43,13 @@ export const Input = ({
 
   return (
     <>
-      <RowBox justify="between" classname={classes}>
+      <RowBox classname={classes}>
         <View className="w-[85%]">
           {focus && type !== 'proceed' && (
             <Text variant="hint">{placeholder}</Text>
           )}
           <TextInput
-            className="text-[14px]"
+            className="text-[14px] "
             placeholder={placeholder}
             onBlur={() => setFocus(false)}
             onFocus={setFocus}

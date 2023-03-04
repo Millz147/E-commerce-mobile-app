@@ -6,28 +6,26 @@ import { colors } from '../../../infrastructures/theme';
 
 export const Button = ({ label = 'Button', variant = 'primary', onPress }) => {
   const variants = {
-    primary: 'bg-primary w-[100%] p-[5px] items-center',
-    secondary: 'bg-primary w-[30%] p-[5px] items-center',
-    tertiary: 'bg-primary w-[40%] p-[5px] items-center',
-    outline: 'bg-transparent border border-black w-[40%] p-[5px] items-center',
-    anchor: 'bg-white w-[40%] p-[5px] items-center',
+    primary: 'bg-primary w-[90%] p-[10px] items-center',
+    secondary: 'bg-primary w-[30%] p-[10px] items-center',
+    tertiary: 'bg-primary w-[40%] p-[10px] items-center',
+    outline: 'bg-transparent border border-black w-[40%] p-[10px] items-center',
+    anchor: 'bg-white w-[40%] p-[10px] items-center',
   };
   return (
-    <View className="p-[10px] w-[90%]">
-      <TouchableOpacity className={variants[variant]} onPress={onPress}>
-        <Text
-          variant={
-            variant === 'outline'
-              ? 'button-outline'
-              : variant === 'anchor'
-              ? 'button-anchor'
-              : 'button'
-          }
-        >
-          {label}
-        </Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity className={variants[variant]} onPress={onPress}>
+      <Text
+        variant={
+          variant === 'outline'
+            ? 'button-outline'
+            : variant === 'anchor'
+            ? 'button-anchor'
+            : 'button'
+        }
+      >
+        {label}
+      </Text>
+    </TouchableOpacity>
   );
 };
 
