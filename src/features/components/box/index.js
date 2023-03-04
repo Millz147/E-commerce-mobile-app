@@ -1,10 +1,20 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { clx } from '../../../utilities/clx';
 
-export const ViewBox = ({ children, classname }) => {
+export const ViewBox = ({ children, classname, clickable = false, onPress }) => {
   const classes = clx('', classname);
-  return <View className={classes}>{children}</View>;
+  return (
+    <>
+      {clickable ? (
+        <TouchableOpacity className={classes} onPress={onPress}>
+          {children}
+        </TouchableOpacity>
+      ) : (
+        <View className={classes}>{children}</View>
+      )}
+    </>
+  );
 };
 
 export const RowBox = ({ children, pad, classname }) => {

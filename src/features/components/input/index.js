@@ -10,17 +10,18 @@ export const Input = ({
   placeholder = 'Anything',
   onChangeText,
   go,
-  type = 'proceed',
+  type = 'default',
   error = 'invalid ',
 }) => {
   const [focus, setFocus] = useState(false);
   const classes = clx(
-    'w-[90%] bg-grey-2/20 justify-between',
+    'w-[100%] bg-grey-2/20 justify-between mt-[10px]',
     type === 'error' && 'border border-error',
     type === 'proceed' ? 'pl-[10px]' : 'p-[20px] '
   );
 
   const property = {
+    default: {},
     error: {
       color: colors.error,
       name: 'close',
