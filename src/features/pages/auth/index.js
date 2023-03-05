@@ -99,6 +99,7 @@ export const _ForgotPassword = ({}) => {
         ))}
         <ArrowNext label="Go Back" screen="SignIn" />
         <Button label="SEND" classname="h-[10%]" />
+       
       </ViewBox>
     </MainWrapper>
   );

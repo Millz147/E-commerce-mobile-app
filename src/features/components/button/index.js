@@ -12,9 +12,9 @@ export const Button = ({
   classname,
 }) => {
   const variants = {
-    primary: 'bg-primary w-[100%] h-[10%] ',
-    secondary: 'bg-primary w-[30%] h-[10%]',
-    tertiary: 'bg-primary w-[50%] h-[10%]',
+    primary: 'bg-primary w-[100%]',
+    secondary: 'bg-primary w-[30%]',
+    tertiary: 'bg-primary w-[50%]',
     outline: 'bg-transparent border border-black w-[40%]',
     anchor: 'bg-white w-[40%]',
   };
