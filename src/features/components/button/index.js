@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Text } from '../typography';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { colors } from '../../../infrastructures/theme';
+import { colors } from '../../constants';
 import { clx } from '../../../utilities/clx';
 
 export const Button = ({

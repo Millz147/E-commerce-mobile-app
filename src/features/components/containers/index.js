@@ -3,12 +3,10 @@ import { Image, TouchableOpacity } from 'react-native';
 import { RowBox, ViewBox } from '../box';
 import { Text } from '../typography';
 import { useNavigation } from '@react-navigation/native';
+import { images } from '../../constants';
 
 export const Social = ({ label }) => {
-  const accounts = [
-    require('../../assets/google.png'),
-    require('../../assets/facebook.png'),
-  ];
+  const accounts = [images['google'], images['facebook']];
   return (
     <ViewBox classname="self-center py-[40px] items-center">
       <Text>{label}</Text>
@@ -35,7 +33,7 @@ export const ArrowNext = ({ label, screen = 'SignIn' }) => {
       <Text>{label}</Text>
       <ViewBox clickable onPress={() => navigation.navigate(screen)}>
         <Image
-          source={require('../../assets/arrow-next.png')}
+          source={images['arrow-left']}
           resizeMode="contain"
           className="w-[20px] ml-1"
         />

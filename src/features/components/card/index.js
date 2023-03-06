@@ -4,7 +4,7 @@ import { Text } from '../typography';
 import { clx } from '../../../utilities/clx';
 import { Image, TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { colors } from '../../../infrastructures/theme';
+import { colors, images } from '../../constants';
 import { Button } from '../button';
 
 export const ProductCard = ({ variant = 'secondary', horizontal = true }) => {
@@ -38,7 +38,7 @@ export const ProductCard = ({ variant = 'secondary', horizontal = true }) => {
             )}
 
             <Image
-              source={require('../../assets/shirt.png')}
+              source={images['shirt']}
               resizeMode="contain"
               className="w-[100%] h-[100%]"
             />
@@ -66,7 +66,7 @@ export const ProductCard = ({ variant = 'secondary', horizontal = true }) => {
         <RowBox classname={classes}>
           <ViewBox classname="border-r-[0.5px] w-[30%] h-[100%]">
             <Image
-              source={require('../../assets/shirt.png')}
+              source={images['shirt']}
               resizeMode="contain"
               className="w-[100%] h-[100%]"
             />

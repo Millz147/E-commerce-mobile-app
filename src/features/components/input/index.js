@@ -3,7 +3,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import { TextInput, View, TouchableOpacity } from 'react-native';
 import { clx } from '../../../utilities/clx';
 import { Text } from '../typography';
-import { colors } from '../../../infrastructures/theme';
+import { colors } from '../../constants';
 import { RowBox } from '../box';
 
 export const Input = ({
@@ -57,7 +57,7 @@ export const Input = ({
             onChangeText={onChangeText}
           />
         </View>
-        {type ? (
+        {type !== 'default' ? (
           <TouchableOpacity
             onPress={property[type]['onPress']}
             className={property[type]['classname']}
