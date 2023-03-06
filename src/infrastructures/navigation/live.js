@@ -1,23 +1,22 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
-import { colors } from '../theme';
-import { Main } from '../../features/screens/live';
+import { colors } from '../../features/constants';
+import { MainStacks } from './stack/main.stack';
 
 const Tab = createMaterialBottomTabNavigator();
 
 export const LiveNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Main"
+      initialRouteName="Home"
       activeColor={colors.primary}
       inactiveColor={colors['grey-2']}
       barStyle={{ backgroundColor: colors.white }}
-    
     >
       <Tab.Screen
-        name="Main"
-        component={Main}
+        name="Home"
+        component={MainStacks}
         options={{
           tabBarLabel: false,
           //   tabBarLabel: 'Main',
@@ -28,7 +27,7 @@ export const LiveNavigator = () => {
       />
       <Tab.Screen
         name="Category"
-        component={Main}
+        component={MainStacks}
         options={{
           tabBarLabel: false,
           //   tabBarLabel: 'Main',
@@ -39,7 +38,7 @@ export const LiveNavigator = () => {
       />
       <Tab.Screen
         name="Favorites"
-        component={Main}
+        component={MainStacks}
         options={{
           tabBarLabel: false,
           //   tabBarLabel: 'Main',
@@ -54,7 +53,7 @@ export const LiveNavigator = () => {
       />
       <Tab.Screen
         name="Bag"
-        component={Main}
+        component={MainStacks}
         options={{
           tabBarLabel: false,
           //   tabBarLabel: 'Main',
@@ -69,7 +68,7 @@ export const LiveNavigator = () => {
       />
       <Tab.Screen
         name="Account"
-        component={Main}
+        component={MainStacks}
         options={{
           tabBarLabel: false,
           tabBarIcon: ({ color }) => (

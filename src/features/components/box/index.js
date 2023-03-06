@@ -19,7 +19,7 @@ export const ViewBox = ({ children, classname, clickable = false, onPress }) => 
 
 export const RowBox = ({ children, pad, classname }) => {
   const classes = clx(
-    'flex-row items-center flex-wrap',
+    'flex-row items-center flex-wrap justify-between',
     `${pad ? 'p-[10px]' : ''}`,
     classname
   );

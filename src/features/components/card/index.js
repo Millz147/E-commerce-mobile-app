@@ -2,20 +2,20 @@ import React from 'react';
 import { ViewBox, RowBox } from '../box';
 import { Text } from '../typography';
 import { clx } from '../../../utilities/clx';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity, ImageBackground } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { colors, images } from '../../constants';
 import { Button } from '../button';
 
-export const ProductCard = ({ variant = 'secondary', horizontal = true }) => {
+export const ProductCard = ({ variant = 'secondary', horizontal }) => {
   const classes = clx(
     'bg-white',
     variant === 'soldout' && 'opacity-[0.6]',
     variant === 'tertiary'
       ? 'w-[30%] h-[40%] p-[10px]'
       : horizontal
-      ? 'w-[90%] h-[30%] border-[0.5px]'
-      : 'w-[40%] h-[50%] p-[10px]'
+      ? 'w-full h-[250px] border-[0.5px]'
+      : 'w-[150px] h-[250px] p-[10px] shadow rounded-[10px] m-[10px]'
   );
 
   const isClose =
@@ -24,7 +24,7 @@ export const ProductCard = ({ variant = 'secondary', horizontal = true }) => {
   return (
     <>
       {!horizontal ? (
-        <ViewBox classname={classes}>
+        <ViewBox clickable classname={classes}>
           <ViewBox classname="w-[100%] h-[50%] bg-white ">
             {variant === 'soldout' && (
               <ViewBox classname="bg-grey-2 p-[5px] items-center justify-center absolute z-[999] w-[100%] top-[50%]">
@@ -134,6 +134,20 @@ export const OrderCard = ({ status = 'Delivered' }) => {
         <Button variant="tertiary" label="Details" />
         <Text variant={variant[status]}>{status}</Text>
       </RowBox>
+    </ViewBox>
+  );
+};
+
+export const TopSales = ({}) => {
+  const classes = clx('w-[140px] h-[140px]  bg-grey-2 rounded-[10px]  items-center justify-center m-[10px] border-primary border shadow');
+  return (
+    <ViewBox clickable classname={classes}>
+      <ImageBackground
+        source={images['shirt']}
+        resizeMode="cover"
+        className="w-[100%] h-[100%] opacity-[0.5]"
+      />
+      <Text classname="absolute top-[50px] text-white self-center text-center">Versace Vintage Shirt  N7000</Text>
     </ViewBox>
   );
 };
